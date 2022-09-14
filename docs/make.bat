@@ -23,6 +23,10 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+:html
+%SPHINXBUILD% -b html %SOURCEDIR% "docs" %SPHINXOPTS% %O%
+goto end
+
 if "%1" == "" goto help
 
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
